@@ -56,7 +56,7 @@ variable datacenter {
 variable bxorg {
   description = "Place here"
 }
-variable bxscpace {
+variable bxspace { 
   description = "Place here"
 }
 variable bxaccount {
