@@ -17,16 +17,15 @@ provider "ibmcloud" {
 ##############################################################################
 # CS Cluster
 ##############################################################################
-resource "ibmcloud_cs_cluster" "testacc_cluster" {
+resource "ibmcloud_cs_cluster" "test_cs_cluster" {
     name = "test"
-    datacenter = "ams03"
+    datacenter = "${var.datacenter}"
     machine_type = "free"
     isolation = "public"
     workers = [{name="worker1",  action="add"},]
     org_guid = "sami.kuronen@fi.ibm.com"
     space_guid = "dev-fra"
     account_guid = "ebc4cdb8c002a13ef9e23794c5e43d56"
-}
 }
 
 
