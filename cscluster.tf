@@ -23,9 +23,9 @@ resource "ibmcloud_cs_cluster" "test_cs_cluster" {
     machine_type = "free"
     isolation = "public"
     workers = [{name="worker1",  action="add"},]
-    org_guid = "sami.kuronen@fi.ibm.com"
-    space_guid = "dev-fra"
-    account_guid = "ebc4cdb8c002a13ef9e23794c5e43d56"
+    org_guid = "${var.bxorg}"
+    space_guid = "${var.bxspace}"
+    account_guid = "${var.bxaccount}"
 }
 
 
@@ -53,6 +53,17 @@ variable slapikey {
 variable datacenter {
   description = "ams03"
 }
+variable bxorg {
+  description = "Place here"
+}
+variable bxscpace {
+  description = "Place here"
+}
+variable bxaccount {
+  description = "Place here"
+}
+
+
 
 
 ##############################################################################
