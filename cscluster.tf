@@ -8,7 +8,7 @@ terraform {
 # IBM Cloud Provider
 ##############################################################################
 # See the README for details on ways to supply these values
-provider "ibmcloud" {
+provider "ibm" {
   bluemix_api_key = "${var.bxapikey}"
   softlayer_username = "${var.slusername}"
   softlayer_api_key = "${var.slapikey}"
@@ -18,7 +18,7 @@ provider "ibmcloud" {
 ##############################################################################
 # CS Cluster
 ##############################################################################
-resource "ibmcloud_cs_cluster" "test_cs_cluster" {
+resource "ibm_container_cluster" "test_cs_cluster" {
     name = "test"
     datacenter = "${var.datacenter}"
     machine_type = "free"
