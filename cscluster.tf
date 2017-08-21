@@ -14,6 +14,7 @@ provider "ibm" {
   softlayer_api_key = "${var.slapikey}"
 }
 
+
 ##############################################################################
 # CS Cluster
 ##############################################################################
@@ -22,7 +23,10 @@ resource "ibmcloud_cs_cluster" "test_cs_cluster" {
     datacenter = "${var.datacenter}"
     machine_type = "free"
     isolation = "public"
-    workers = [{name="worker1",  action="add"},]
+    workers = [{
+      name="worker1"  
+      action="add"
+    }]
     org_guid = "${var.bxorg}"
     space_guid = "${var.bxspace}"
     account_guid = "${var.bxaccount}"
