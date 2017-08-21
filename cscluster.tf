@@ -12,7 +12,6 @@ provider "ibmcloud" {
   bluemix_api_key = "${var.bxapikey}"
   softlayer_username = "${var.slusername}"
   softlayer_api_key = "${var.slapikey}"
-  region = "eu-de"
 }
 
 ##############################################################################
